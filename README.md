@@ -1,5 +1,5 @@
-# GitHub Update Tag Action
-A GitHub action that simply tags the repository with the specified tag. If the tag exists it gets updated.
+# GitHub Update Tags Action
+A GitHub action that simply updates the tags in the repository.
 
 ## Usage
 ```yml
@@ -12,13 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Tag Repo
-        uses: richardsimko/update-tag@v1
-        with:
-          tag_name: name-of-tag
+        uses: ThirteenAG/update-tags@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
-
-### Inputs
-
-- **tag_name** _(required)_ - The name of the tag you want to create or update.
