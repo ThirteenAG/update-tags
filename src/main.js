@@ -26,8 +26,6 @@ async function run() {
             ref: `tags/${tagName}`,
             sha: GITHUB_SHA
           });
-        }).catch(err => {
-          console.error("Unable to find commits", err);
         });
       });
   } catch (error) {
